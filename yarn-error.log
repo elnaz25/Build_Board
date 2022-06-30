@@ -1,0 +1,53 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\ELNAZ\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Users\ELNAZ\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\ELNAZ\AppData\Local\Programs\Python\Python310\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\MinGW\bin;C:\Program Files\PuTTY\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Users\ELNAZ\AppData\Local\Microsoft\WindowsApps;C:\Users\ELNAZ\.dotnet\tools;C:\Program Files\Azure Data Studio\bin;C:\Program Files\JetBrains\PhpStorm 2022.1.1\bin;;C:\xampp\php;C:\Users\ELNAZ\composer;C:\Users\ELNAZ\AppData\Roaming\Composer\vendor\bin;C:\Users\ELNAZ\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
+
+npm manifest: 
+  {
+    "name": "view_board",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "serve": "vue-cli-service serve",
+      "build": "vue-cli-service build",
+      "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+      "bootstrap": "^5.1.1",
+      "core-js": "^3.6.5",
+      "uuid": "^8.3.2",
+      "vue": "^2.6.11",
+      "vuedraggable": "^2.24.3",
+      "vuex": "^3.6.2"
+    },
+    "devDependencies": {
+      "@vue/cli-plugin-babel": "~4.5.0",
+      "@vue/cli-plugin-eslint": "~4.5.0",
+      "@vue/cli-service": "~4.5.0",
+      "babel-eslint": "^10.1.0",
+      "eslint": "^6.7.2",
+      "eslint-plugin-vue": "^6.2.2",
+      "vue-template-compiler": "^2.6.11"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
