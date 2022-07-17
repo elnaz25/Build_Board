@@ -49,12 +49,14 @@ export default{
 
 <style>
 .addSection {
-  margin-top: 0 15px;
+  margin: 0 10px;
+  padding: 12px;
   display: inline-block;
   flex-direction: column;
   align-items: flex-start;
-  width: 90px;
-  height: 50px;
+  border-radius: 120px;
+  font-weight: 500;
+  font-size: 15px;
 }
 
 .deleteSection {
@@ -75,18 +77,19 @@ export default{
   display: inline-block;
   flex-direction: column;
   align-items: flex-start;
-  width: 250px;
-  height: 450px;
-  background-color: #080808a6;
+  width: 290px;
+  background-color: #0c0c0ca6;
   border-radius: 10px;
   padding: 15px;
   border: solid rgb(243, 243, 243) 1px;
-  color: rgb(255, 254, 254);
+  color: rgb(253, 252, 252);
   vertical-align: top;
+  overflow-y: scroll;
 }
 
 .section-title {
   font-size: 25px;
   font-weight: bold;
 }
+
 </style>

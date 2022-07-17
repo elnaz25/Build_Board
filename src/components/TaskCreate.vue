@@ -1,7 +1,7 @@
 <template>
   <form v-bind:class="classList" v-on:submit.prevent="createTaskInSectionI">
     <input v-model="content" type="text" class="input-text" placeholder="Add task" v-on:focusin="startEditing" v-on:focusout="finishEditing"/>
-    <button v-if="isActive || contentExists" type="submit" class="add-button">+ Add</button>
+    <button v-if="isActive || contentExists" type="submit" class="add-button" :icon="Add">➕</button>
   </form>
 </template>
 

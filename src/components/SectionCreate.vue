@@ -2,7 +2,7 @@
   <form :class="classList" @submit.prevent="createSectionI">
     <input v-model="title" type="text" class="input-text" placeholder="Add Item" @focusin="startEditing" @focusout="finishEditing"/>
     <br>
-    <button v-if="isActive || titleExists" type="submit" class="add-button">+</button>
+    <button v-if="isActive || titleExists" type="submit" class="add-button">➕</button>
   </form>
 </template>
 

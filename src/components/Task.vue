@@ -1,7 +1,7 @@
 <template>
   <div :class="classList">
-    <button class="delete-button" @click="deleteTaskI">×</button>
-    <button class="edit-button" @click="updateTaskI" >{{ isEditing ? 'Update' : 'Edit' }}</button>
+    <button class="delete-button" @click="deleteTaskI" type="primary">❌</button>
+    <button class="edit-button" @click="updateTaskI" type="primary">✏️</button>
     <h3 v-if="!isEditing">{{ this.task.content }}</h3>
     <div v-else>
       <input :value="newContent" @change="taskContentChange" type="text" class="input-task"/>
@@ -74,22 +74,19 @@ export default{
   padding: 20px 15px;
   background-color: rgba(37, 36, 36, 0.712);
   border-radius: 10px;
-  width: 200px;
-  height: 40px;
+  width: 260px;
   cursor: pointer;
 }
 
 .delete-button {
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 5px;
+  right: 5px;
   font-size: 20px;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
-  background-color: #ca7da1;
-  color: white;
-  margin: 3px;
+  margin: 5px;
 }
 
 .delete-button:hover{
@@ -100,14 +97,12 @@ export default{
 .edit-button{
   position: absolute;
   padding: 5px 8px;
-  bottom: 3px;
-  right: 3px;
-  font-size: 10px;
+  bottom: 5px;
+  right: 5px;
+  font-size: 15px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
-  background-color: rgb(16, 149, 211);
-  color: white;
   margin: 5px;
 }
 
@@ -119,4 +114,5 @@ export default{
 .content {
   font-size: 20px;
 }
+
 </style>
