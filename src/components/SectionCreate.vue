@@ -1,9 +1,15 @@
 <template>
-  <form :class="classList" @submit.prevent="createSectionI">
-    <input v-model="title" type="text" class="input-text" placeholder="Add Item" @focusin="startEditing" @focusout="finishEditing"/>
+  <v-form :class="classList" @submit.prevent="createSectionI">
+    <v-text-field v-model="title" label="Add Item" type="text" class="input-text" v-on:focusin="startEditing" v-on:focusout="finishEditing">
+    </v-text-field>
+    
     <br>
-    <button v-if="isActive || titleExists" type="submit" class="add-button">➕</button>
-  </form>
+     <v-btn class="mx-2" fab small dark color="indigo" v-if="isActive || titleExists" type="submit">
+      <v-icon dark>
+        mdi-plus
+      </v-icon>
+    </v-btn>
+  </v-form>
 </template>
 
 <script>

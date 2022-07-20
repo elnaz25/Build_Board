@@ -1,10 +1,21 @@
 <template>
   <div :class="classList">
-    <button class="delete-button" @click="deleteTaskI" type="primary">❌</button>
-    <button class="edit-button" @click="updateTaskI" type="primary">✏️</button>
+
+    <v-btn class="delete-button" type="primary" fab dark small @click="deleteTaskI">
+      <v-icon dark>
+        mdi-delete
+      </v-icon>
+    </v-btn>
+
+    <v-btn class="edit-button" type="primary" fab dark small @click="updateTaskI">
+      <v-icon dark>
+        mdi-pencil
+      </v-icon>
+    </v-btn>
+
     <h3 v-if="!isEditing">{{ this.task.content }}</h3>
     <div v-else>
-      <input :value="newContent" @change="taskContentChange" type="text" class="input-task"/>
+      <v-text-field :value="newContent" @change="taskContentChange" type="text" class="input-task"></v-text-field>
     </div>
     
   </div>
@@ -53,7 +64,7 @@ export default{
       this.newContent = e.target.value;
     },
     updateTaskI(){
-      console.log(this.task.content);
+      //console.log(this.task.content);
       this.isEditing = this.isEditing == true ? false : true;
       if(this.isEditing){
         this.newContent = this.task.content;
@@ -67,50 +78,30 @@ export default{
 }
 </script>
 
-<style>
+<style scopd>
 .task {
-  margin: 10px 0;
-  position: relative;
-  padding: 20px 15px;
-  background-color: rgba(37, 36, 36, 0.712);
+  background-color: rgb(7, 8, 8);
   border-radius: 10px;
-  width: 260px;
-  cursor: pointer;
+  color:aliceblue;
+  width: 240px;
+  height: 120px;
 }
-
+.input-task{
+  color :aliceblue;
+  background-color:rgba(255, 255, 255, 0);
+  font-size: 20px;
+}
 .delete-button {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 8px;
-  border: none;
-  margin: 5px;
-}
+  left: 195px;
 
-.delete-button:hover{
-  opacity: 0.8;
-  cursor: pointer;
 }
 
 .edit-button{
   position: absolute;
-  padding: 5px 8px;
-  bottom: 5px;
-  right: 5px;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 10px;
-  border: none;
-  margin: 5px;
+  top:42px;
+  left:153px;
 }
-
-.edit-button:hover{
-  opacity: 0.8;
-  cursor: pointer;
-}
-
 .content {
   font-size: 20px;
 }

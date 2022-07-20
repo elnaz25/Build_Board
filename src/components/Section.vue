@@ -6,6 +6,7 @@
     </div>
     <draggable group="tasks" :list="tasks" @end="$emit('change')">
       <Task v-for="(task, index) in tasks" :key="task.id" :task="task" :taskIndex="index" :sectionIndex="sectionIndex"/>
+      <br>
       <TaskCreate :sectionIndex="sectionIndex"/>
     </draggable>
   </div>
@@ -46,50 +47,3 @@ export default{
   }
 }
 </script>
-
-<style>
-.addSection {
-  margin: 0 10px;
-  padding: 12px;
-  display: inline-block;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 120px;
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.deleteSection {
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  font-size: 25px;
-}
-
-.deleteSection:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-.section {
-  margin: 0 5px auto;
-  position: relative;
-  display: inline-block;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 290px;
-  background-color: #0c0c0ca6;
-  border-radius: 10px;
-  padding: 15px;
-  border: solid rgb(243, 243, 243) 1px;
-  color: rgb(253, 252, 252);
-  vertical-align: top;
-  overflow-y: scroll;
-}
-
-.section-title {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-</style>

@@ -1,8 +1,14 @@
 <template>
-  <form v-bind:class="classList" v-on:submit.prevent="createTaskInSectionI">
-    <input v-model="content" type="text" class="input-text" placeholder="Add task" v-on:focusin="startEditing" v-on:focusout="finishEditing"/>
-    <button v-if="isActive || contentExists" type="submit" class="add-button" :icon="Add">➕</button>
-  </form>
+  <v-form v-bind:class="classList" v-on:submit.prevent="createTaskInSectionI">
+    <v-text-field v-model="content" label="Add Task" type="text" class="input-text" v-on:focusin="startEditing" v-on:focusout="finishEditing">
+    </v-text-field>
+   <br>
+    <v-btn class="mx-2" fab small dark color="indigo" v-if="isActive || contentExists" type="submit">
+      <v-icon dark>
+        mdi-plus
+      </v-icon>
+    </v-btn>
+  </v-form>
 </template>
 
 <script>
@@ -37,7 +43,7 @@ export default{
   methods:{
     ...mapActions(["createTaskInSection"]),
     createTaskInSectionI(){
-      console.log(this.content);
+      //console.log(this.content);
       this.createTaskInSection({ content: this.content, sectionIndex: this.sectionIndex });
       this.content = '';
     },
@@ -50,3 +56,4 @@ export default{
   },
 }
 </script>
+
