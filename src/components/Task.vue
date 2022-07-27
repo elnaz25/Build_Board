@@ -78,32 +78,3 @@ export default{
 }
 </script>
 
-<style scopd>
-.task {
-  background-color: rgb(7, 8, 8);
-  border-radius: 10px;
-  color:aliceblue;
-  width: 240px;
-  height: 120px;
-}
-.input-task{
-  color :aliceblue;
-  background-color:rgba(255, 255, 255, 0);
-  font-size: 20px;
-}
-.delete-button {
-  position: absolute;
-  left: 195px;
-
-}
-
-.edit-button{
-  position: absolute;
-  top:42px;
-  left:153px;
-}
-.content {
-  font-size: 20px;
-}
-
-</style>
